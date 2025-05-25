@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="icon" href="favicon.png" type="image/png">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mueblería Guadiana</title>
+  <link rel="stylesheet" href="muebleria1.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+    <!-- ENCABEZADO (HEADER) -->
+    <header>
+        <div class="logo">
+            <img src="imagen/logo.png" alt="Sector Mueblero de Durango" class="logo-img">     
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="eventos.html">EVENTOS</a></li>
+                <li class="dropdown">
+                  <a href="#">CATEGORIAS</a>
+                  <ul class="dropdown-content">
+                      <li><a href="comedores.html">Comedor</a></li>
+                      <li><a href="buffeteros.html">Buffeteros</a></li>
+                      <li><a href="cocinas.html">Cocinas</a></li>
+                      <li><a href="islas.html">Islas</a></li>
+                      <li><a href="recamaras.html">Recámaras</a></li>
+                      <li><a href="accesorios.html">Accesorios</a></li>
+                  </ul>
+              </li>
+                <li><a href="index.html#equipo">EQUIPO</a></li>
+                <li><a href="index.html#contacto">CONTACTO</a></li>
+                <div class="search-container">
+                  <input type="text" placeholder="Buscar productos...">
+                  <button><i class="fas fa-search"></i></button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- FILTROS DE CATEGORÍA -->
+    <div class="category-filters">
+        <button onclick="filterByCategory('todos')">Todos</button>
+        <div class="comedor-button">
+            <button>Comedor</button>
+            <div class="comedor-options">
+                <button onclick="filterByCategory('4sillas')">4 Sillas</button>
+                <button onclick="filterByCategory('6sillas')">6 Sillas</button>
+                <button onclick="filterByCategory('8sillas')">8 Sillas</button>
+                <button onclick="filterByCategory('12sillas')">12 Sillas</button>
+            </div>
+        </div>
+        <button onclick="filterByCategory('buffet')">Buffet</button>
+        <button onclick="filterByCategory('isla')">Isla</button>
+        <button onclick="filterByCategory('cocina')">Cocinas</button>
+        <div class="color-button">
+            <button>Color</button>
+            <div class="color-options">
+                <button onclick="filterByCategory('tabaco')">Tabaco</button>
+                <button onclick="filterByCategory('nogal')">Nogal</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!--productos-->
+<body>
+    <section class="catalogo">
+        <h2 class="titulo-catalogo">Catálogo Mueblería Romasa</h2>
+  
+          <div class="grid-mueblerias">
+
+          <!-- Producto 1 -->
+          <div class="muebleria" onclick="openModal('Cocina Madrid', 'romasa/Cocina Madrid.jpg', 'Comedor', '160cm x 90cm', 'Mesa para 6 personas, fabricada en madera de pino con acabado en color tabaco. Incluye 6 sillas tapizadas.')">
+            <img src="romasa/Cocina Madrid.jpg" alt="Cocina Madrid" />
+            <div class="info">
+              <p>Cocina</p>
+              <h3>Madrid</h3>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+      
+          <!-- Producto 2 -->
+          <div class="muebleria" onclick="openModal('Cocina Ambar', 'romasa/Cocina Ambar.jpg','Comedor', '180cm x 100cm', 'Mesa para 6 personas, diseño elegante con acabado en color tabaco. Incluye 6 sillas tapizadas con tela de alta calidad.')">
+            <img src="romasa/Cocina Ambar.jpg" alt="Cocina ambar" />
+            <div class="info">
+              <p>Cocina</p>
+              <h3>Ambar</h3>
+              <p>Color tabaco</p>
+            </div>
+          </div>
+      
+          <!-- Producto 3 -->
+          <div class="muebleria" onclick="openModal('Barra Barcelona', 'romasa/Barra Barcelona.jpg', 'Comedor', '170cm x 95cm', 'Mesa para 6 personas, estilo clásico con acabado en color tabaco. Base sólida y superficie resistente. Incluye 6 sillas con respaldo alto.')">
+            <img src="romasa/Barra Barcelona.jpg" alt="Barra" />
+            <div class="info">
+              <p>Barra</p>
+              <h3>Barcelona</h3>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+      
+          <!-- Producto 4 -->
+          <div class="muebleria" onclick="openModal('Antecomedor Diamond', 'romasa/Antecomedor Diamond.jpg', 'Comedor', '120cm x 80cm', 'Mesa compacta para 4 personas, diseño escandinavo con acabado en color tabaco. Perfecta para espacios reducidos. Incluye 4 sillas ergonómicas.')">
+            <img src="romasa/Antecomedor Diamond.jpg" alt="Silla Moderna" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Diamond</h3>
+              <p>Mesa para 6 personas</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+      
+          <!-- Producto 5 -->
+          <div class="muebleria" onclick="openModal('Antecomedor Barcelona', 'romasa/Antecomedor Barcelona.jpg', 'Comedor', '130cm x 85cm', 'Mesa para 4 personas con diseño clásico danés. Fabricada en madera maciza con acabado en color tabaco. Incluye 4 sillas con asientos acolchados.')">
+            <img src="romasa/Antecomedor Barcelona.jpg"alt="Mesa Rústica" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Barcelona</h3>
+              <p>Mesa para 6 personas</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+      
+          <!-- Producto 6 -->
+          <div class="muebleria" onclick="openModal('Antecomedor Barcelona', 'romasa/Barcelona 90 x 90.jpg', 'Comedor', '90cm x 90cm', 'Mesa extensible que se adapta de 4 a 6 personas. Sistema de extensión fácil de usar. Acabado en color nogal. Incluye 6 sillas con tapizado premium.')">
+            <img src="romasa/Barcelona 90 x 90.jpg" alt="Set Madera Natural" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Barcelona</h3>
+              <p>Mesa para 4 personas</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+          
+          <!-- Producto 7 -->
+           
+          <div class="muebleria" onclick="openModal('Bufetero Jaspen', 'romasa/Buffetero Jaspen SNSL.jpg', 'Comedor', '120-180cm x 90cm', 'Mesa extensible que se adapta de 4 a 6 personas. Sistema de extensión fácil de usar. Acabado en color nogal. Incluye 6 sillas con tapizado premium.')">
+            <img src="romasa/Buffetero Jaspen SNSL.jpg" alt="Mesa Elegante" />
+        <div class="info">
+          <p>Buffetero</p>
+          <h3>Jaspen SNSL</h3>
+          <p>Color: Nogal</p>
+        </div>
+      </div>    
+      
+         <!-- Producto 8 -->
+         <div class="muebleria" onclick="openModal('Comedor Florencia', 'romasa/Comedor Florencia.jpg', 'Comedor', '120-180cm x 90cm', 'Mesa extensible que se adapta de 4 a 6 personas. Sistema de extensión fácil de usar. Acabado en color nogal. Incluye 6 sillas con tapizado premium.')">
+          <img src="romasa/Comedor Florencia.jpg" alt="Mesa Elegante" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Florencia</h3>
+              <p>Mesa para 8 personas.</p>
+              <p>Color: Tabaco</p>
+
+            </div>
+        </div>    
+
+         <!-- Producto 9 -->
+         <div class="muebleria" onclick="openModal('Comedor Marsella', 'romasa/Comedor Marsella.jpg', 'Comedor', '120-180cm x 90cm', 'Mesa extensible que se adapta de 4 a 6 personas. Sistema de extensión fácil de usar. Acabado en color nogal. Incluye 6 sillas con tapizado premium.')">
+          <img src="romasa/Comedor Marsella.jpg" alt="Mesa Elegante" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Marsella</h3>
+              <p>Mesa para 6 personas.</p>
+              <p>Color: Tabaco</p>
+
+            </div>
+        </div>   
+
+        <!-- Producto 10 -->
+        <div class="muebleria" onclick="openModal('Comedor Madrid', 'romasa/Comedor Madrid.jpg', 'Comedor', '120-180cm x 90cm', 'Mesa extensible que se adapta de 4 a 6 personas. Sistema de extensión fácil de usar. Acabado en color nogal. Incluye 6 sillas con tapizado premium.')">
+          <img src="romasa/Comedor Madrid.jpg" alt="Mesa Elegante" />
+          <div class="info">
+            <p>Comedor</p>
+            <h3>Madrid</h3>
+            <p>Mesa para 6 personas.</p>
+            <p>Color: Tabaco</p>
+
+          </div>
+      </div>   
+
+      <!-- Producto 11 -->
+      <div class="muebleria" onclick="openModal('Comedor Diamante', 'romasa/DIAMANTE 8 SILLAS.jpg', 'Comedor', '120-180cm x 90cm', 'Mesa extensible que se adapta de 4 a 6 personas. Sistema de extensión fácil de usar. Acabado en color nogal. Incluye 6 sillas con tapizado premium.')">
+        <img src="romasa/DIAMANTE 8 SILLAS.jpg" alt="Mesa Elegante" />
+        <div class="info">
+          <p>Comedor</p>
+          <h3>Diamante</h3>
+          <p>Mesa para 8 personas.</p>
+          <p>Color: Nogal</p>
+
+        </div>
+    </div>   
+
+    <!-- Producto 12 -->
+    <div class="muebleria" onclick="openModal('Cocina Jaspen Escuadra', 'romasa/JASPEN ESCUADRA.jpg', 'Comedor', '120-180cm x 90cm', 'Mesa extensible que se adapta de 4 a 6 personas. Sistema de extensión fácil de usar. Acabado en color nogal. Incluye 6 sillas con tapizado premium.')">
+      <img src="romasa/JASPEN ESCUADRA.jpg" alt="Mesa Elegante" />
+      <div class="info">
+        <p>Cocina</p>
+        <h3>Jaspen Escuadra</h3>
+        <p>Color: Tabaco</p>
+
+      </div>
+  </div>   
+
+   <!-- Producto 13 -->
+   <div class="muebleria" onclick="openModal('Isla Jaspen', 'romasa/ISLA JASPEN.jpg', 'Comedor', '120-180cm x 90cm', 'Mesa extensible que se adapta de 4 a 6 personas. Sistema de extensión fácil de usar. Acabado en color nogal. Incluye 6 sillas con tapizado premium.')">
+    <img src="romasa/ISLA JASPEN.jpg" alt="Mesa Elegante" />
+    <div class="info">
+      <p>Isla</p>
+      <h3>Jaspen</h3>
+      <p>Color: Tabaco</p>
+
+    </div>
+</div>   
+
+  <!-- Producto 14 -->
+  <div class="muebleria" onclick="openModal('Cocina Victoria Gris', 'romasa/Cocina Victoria Gris.jpg', 'Comedor', '120-180cm x 90cm', 'Mesa extensible que se adapta de 4 a 6 personas. Sistema de extensión fácil de usar. Acabado en color nogal. Incluye 6 sillas con tapizado premium.')">
+    <img src="romasa/Cocina Victoria Gris.jpg" alt="Mesa Elegante" />
+    <div class="info">
+      <p>Cocina</p>
+      <h3>Mesa Roma</h3>
+      <p>Victoria gris</p>
+
+    </div>
+</div>   
+
+
+    </section>
+    
+    <script>
+      let currentPosition = 0;
+      const itemsPerPage = 3;
+      
+      function moveCarousel(direction) {
+        const container = document.querySelector('.grid-mueblerias');
+        const items = container.children;
+        const maxPosition = Math.ceil(items.length / itemsPerPage) - 1;
+        
+        currentPosition = Math.max(0, Math.min(currentPosition + direction, maxPosition));
+        const translateX = currentPosition * -33.33;
+        
+        container.style.transform = `translateX(${translateX}%)`;
+      }
+    </script>
+
+    <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector("header");
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+  </script>
+  
+    <script src="search.js"></script>
+    <script src="muebleria2.js"></script>
+
+<!-- Modal -->
+    <div class="modal" id="productModal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <img id="modalImage" src="" alt="Producto" class="modal-image">
+        <div class="modal-details">
+          <h2 id="modalTitle"></h2>
+          <p id="modalCategory"></p>
+          <p id="modalMeasures"></p>
+          <p id="modalDescription"></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openModal(title, image, category, measures, description) {
+        document.getElementById('modalTitle').textContent = title;
+        document.getElementById('modalImage').src = image;
+        document.getElementById('modalCategory').textContent = 'Categoría: ' + category;
+        document.getElementById('modalMeasures').textContent = 'Medidas: ' + measures;
+        document.getElementById('modalDescription').textContent = description;
+        
+        const modal = document.getElementById('productModal');
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        const modal = document.getElementById('productModal');
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      // Cerrar modal al hacer clic fuera del contenido
+      document.getElementById('productModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+          closeModal();
+        }
+      });
+    </script>
+</body>
+</html>

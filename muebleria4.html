@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="icon" href="favicon.png" type="image/png">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mueblería Romasa</title>
+  <link rel="stylesheet" href="muebleria4.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="search.js"></script>
+
+</head>
+
+    <!-- ENCABEZADO (HEADER) -->
+    <header>
+        <div class="logo">
+            <img src="imagen/logo.png" alt="Sector Mueblero de Durango" class="logo-img">     
+        </div>
+        <nav>
+            <ul>
+              <li><a href="index.html">INICIO</a></li>
+              <li><a href="eventos.html">EVENTOS</a></li>
+              <li class="dropdown">
+                <a href="#">CATEGORIAS</a>
+                <ul class="dropdown-content">
+                    <li><a href="comedores.html">Comedor</a></li>
+                    <li><a href="buffeteros.html">Buffeteros</a></li>
+                    <li><a href="cocinas.html">Cocinas</a></li>
+                    <li><a href="islas.html">Islas</a></li>
+                    <li><a href="recamaras.html">Recámaras</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                </ul>
+            </li>
+              <li><a href="index.html#equipo">EQUIPO</a></li>
+              <li><a href="index.html#contacto">CONTACTO</a></li>
+                <div class="search-container">
+                  <input type="text" placeholder="Buscar productos...">
+                  <button><i class="fas fa-search"></i></button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- FILTROS DE CATEGORÍA -->
+    <div class="category-filters">
+        <button onclick="filterByCategory('todos')">Todos</button>
+        <div class="comedor-button">
+            <button>Comedor</button>
+            <div class="comedor-options">
+                <button onclick="filterByCategory('4sillas')">4 Sillas</button>
+                <button onclick="filterByCategory('6sillas')">6 Sillas</button>
+                <button onclick="filterByCategory('8sillas')">8 Sillas</button>
+                <button onclick="filterByCategory('12sillas')">12 Sillas</button>
+            </div>
+        </div>
+        <button onclick="filterByCategory('recamaras')">Recámaras</button>
+        <button onclick="filterByCategory('buffet')">Buffet</button>
+        <button onclick="filterByCategory('accesorios')">Accesorios</button>
+        <div class="color-button">
+            <button>Color</button>
+            <div class="color-options">
+                <button onclick="filterByCategory('tabaco')">Tabaco</button>
+                <button onclick="filterByCategory('nogal')">Nogal</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!--productos-->
+<body>
+    <section class="catalogo">
+        <h2 class="titulo-catalogo">Catálogo Mueblería Alfa</h2>
+  
+          <div class="grid-mueblerias">
+          <!-- Producto 1 -->
+          <div class="muebleria" onclick="openModal('Recamara Bourbon', 'Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0001.jpg', 'Recámara', '200cm x 180cm', 'Elegante recámara con diseño moderno, incluye cabecera y buró.')">
+            <img src="Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0001.jpg" alt="Recámara Alfa 1" />
+            <div class="info">
+              <p>Recámara</p>
+              <h3>Bourbon</h3>
+              <p>Matrimonial</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+      
+          <!-- Producto 2 -->
+          <div class="muebleria" onclick="openModal('Recamara Dubai', 'Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0002.jpg', 'Recámara', '200cm x 180cm', 'Recámara moderna con diseño elegante, incluye cabecera y dos burós.')">
+            <img src="Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0002.jpg" alt="Recámara Alfa 2" />
+            <div class="info">
+              <p>Recámara</p>
+              <h3>Dubai</h3>
+              <p>King Size</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+      
+          <!-- Producto 3 -->
+          <div class="muebleria" onclick="openModal('Recámara Tatum', 'Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0003.jpg', 'Recámara', '120cm x 80cm', 'Recámara compacta ideal para espacios pequeños.')">
+            <img src="Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0003.jpg" alt="Recámara Alfa 3" />
+            <div class="info">
+              <p>Recámara</p>
+              <h3>Tatum</h3>
+              <p>Individual</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+      
+          <!-- Producto 4 -->
+          <div class="muebleria" onclick="openModal('Recámara Warner', 'Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0004.jpg', 'Recámara', '200cm x 110cm', 'Recámara elegante con diseño moderno.')">
+            <img src="Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0004.jpg" alt="Recámara Alfa 4" />
+            <div class="info">
+              <p>Recámara</p>
+              <h3>Warner</h3>
+              <p>Matrimonial</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+      
+          <!-- Producto 5 -->
+          <div class="muebleria" onclick="openModal('Recámara Malbec', 'Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0005.jpg', 'Recámara', '180cm x 100cm', 'Recámara moderna con diseño único.')">
+            <img src="Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0005.jpg" alt="Recámara Alfa 5" />
+            <div class="info">
+              <p>Recámara</p>
+              <h3>Malbec</h3>
+              <p>King Size</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+      
+          <!-- Producto 6 -->
+          <div class="muebleria" onclick="openModal('Recámara Sidney', 'Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0006.jpg', 'Recámara', '160cm x 90cm', 'Recámara contemporánea con diseño elegante.')">
+            <img src="Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0006.jpg" alt="Recámara Alfa 6" />
+            <div class="info">
+              <p>Recámara</p>
+              <h3>Sidney</h3>
+              <p>Queen Size</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+      
+          <!-- Producto 7 -->
+          <div class="muebleria" onclick="openModal('Recámara Rochelle', 'Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0007.jpg', 'Recámara', '180cm x 100cm', 'Recámara elegante con diseño moderno.')">
+            <img src="Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0007.jpg" alt="Recámara Alfa 7" />
+            <div class="info">
+              <p>Recámara</p>
+              <h3>Rochelle</h3>
+              <p>King Size</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+      
+          <!-- Producto 8 -->
+          <div class="muebleria" onclick="openModal('Recámara Milan', 'Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0008.jpg', 'Recámara', '120cm x 80cm', 'Recámara compacta con diseño contemporáneo.')">
+            <img src="Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0008.jpg" alt="Recámara Alfa 8" />
+            <div class="info">
+              <p>Recámara</p>
+              <h3>Milan</h3>
+              <p>Individual</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+      
+          <!-- Producto 9 -->
+          <div class="muebleria" onclick="openModal('Recámara Manchester', 'Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0009.jpg', 'Recámara', '160cm x 90cm', 'Recámara moderna con diseño único.')">
+            <img src="Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0009.jpg" alt="Recámara Alfa 9" />
+            <div class="info">
+              <p>Recámara</p>
+              <h3>Manchester</h3>
+              <p>Queen Size</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+      
+          <!-- Producto 10 -->
+          <div class="muebleria" onclick="openModal('Recámara Durham', 'Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0010.jpg', 'Recámara', '180cm x 100cm', 'Elegante recámara con diseño moderno.')">
+            <img src="Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0010.jpg" alt="Recámara Alfa 10" />
+            <div class="info">
+              <p>Recámara</p>
+              <h3>Durham</h3>
+              <p>King Size</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Producto 11 -->
+          <div class="muebleria" onclick="openModal('Recámara Durham', 'Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0011.jpg', 'Recámara', '180cm x 100cm', 'Elegante recámara con diseño moderno.')">
+            <img src="Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0011.jpg" alt="Recámara Alfa 10" />
+            <div class="info">
+              <p>Recámara</p>
+              <h3>Durham</h3>
+              <p>King Size</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Producto 12 -->
+          <div class="muebleria" onclick="openModal('Recámara Yakarta', 'Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0012.jpg', 'Recámara', '180cm x 100cm', 'Elegante recámara con diseño moderno.')">
+            <img src="Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0012.jpg" alt="Recámara Alfa 10" />
+            <div class="info">
+              <p>Recámara</p>
+              <h3>Yakarta</h3>
+              <p>King Size</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Producto 13 -->
+          <div class="muebleria" onclick="openModal('Recámara Gales', 'Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0013.jpg', 'Recámara', '180cm x 100cm', 'Elegante recámara con diseño moderno.')">
+            <img src="Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0013.jpg" alt="Recámara Alfa 10" />
+            <div class="info">
+              <p>Recámara</p>
+              <h3>Gales</h3>
+              <p>King Size</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Producto 14 -->
+          <div class="muebleria" onclick="openModal('Recámara Castilla', 'Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0014.jpg', 'Recámara', '180cm x 100cm', 'Elegante recámara con diseño moderno.')">
+            <img src="Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0014.jpg" alt="Recámara Alfa 10" />
+            <div class="info">
+              <p>Recámara</p>
+              <h3>Castilla</h3>
+              <p>King Size</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Producto 15 -->
+          <div class="muebleria" onclick="openModal('Recámara Merlot', 'Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0015.jpg', 'Recámara', '180cm x 100cm', 'Elegante recámara con diseño moderno.')">
+            <img src="Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0015.jpg" alt="Recámara Alfa 10" />
+            <div class="info">
+              <p>Recámara</p>
+              <h3>Merlot</h3>
+              <p>King Size</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Producto 16 -->
+          <div class="muebleria" onclick="openModal('Comedor Columbia', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0016.jpg', 'Comedor', '200cm x 110cm', 'Comedor elegante con acabados de lujo.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0016.jpg" alt="Comedor Columbia" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Columbia</h3>
+              <p>8 personas</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Producto 17 -->
+          <div class="muebleria" onclick="openModal('Recámara York', 'Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0017.jpg', 'Recámara', '180cm x 100cm', 'Elegante recámara con diseño moderno.')">
+            <img src="Alfa/Catalogo Alfa JUNIO 2024 email-3-20_page-0017.jpg" alt="Recámara Alfa 10" />
+            <div class="info">
+              <p>Recámara</p>
+              <h3>York</h3>
+              <p>King Size</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Comedor 1 -->
+          <div class="muebleria" onclick="openModal('Comedor Bourbon', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0001.jpg', 'Comedor', '180cm x 100cm', 'Elegante comedor con diseño moderno.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0001.jpg" alt="Comedor Alfa 1" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Bourbon</h3>
+              <p>6 personas</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Comedor 2 -->
+          <div class="muebleria" onclick="openModal('Comedor Bourbon', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0002.jpg', 'Comedor', '200cm x 110cm', 'Comedor elegante con acabados de lujo.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0002.jpg" alt="Comedor Alfa 2" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Bourbon</h3>
+              <p>6 personas</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Comedor 3 -->
+          <div class="muebleria" onclick="openModal('Comedor Bourbon', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0003.jpg', 'Comedor', '160cm x 90cm', 'Comedor moderno con diseño minimalista.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0003.jpg" alt="Comedor Alfa 3" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Bourbon</h3>
+              <p>8 personas</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Comedor 4 -->
+          <div class="muebleria" onclick="openModal('Comedor Bourbon', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0004.jpg', 'Comedor', '220cm x 110cm', 'Comedor espacioso con diseño contemporáneo.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0004.jpg" alt="Comedor Alfa 4" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Bourbon</h3>
+              <p>10 personas</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Comedor 5 -->
+          <div class="muebleria" onclick="openModal('Comedor Bourbon', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0005.jpg', 'Comedor', '180cm x 100cm', 'Comedor elegante con acabados premium.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0005.jpg" alt="Comedor Alfa 5" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Bourbon</h3>
+              <p>10 personas</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Comedor 6 -->
+          <div class="muebleria" onclick="openModal('Comedor Bourbon', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0006.jpg', 'Comedor', '240cm x 120cm', 'Comedor amplio con diseño clásico.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0006.jpg" alt="Comedor Alfa 6" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Bourbon</h3>
+              <p>12 personas</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Comedor 7 -->
+          <div class="muebleria" onclick="openModal('Comedor Bourbon', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0007.jpg', 'Comedor', '160cm x 90cm', 'Comedor moderno con diseño funcional.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0007.jpg" alt="Comedor Alfa 7" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Bourbon</h3>
+              <p>12 personas</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Comedor 8 -->
+          <div class="muebleria" onclick="openModal('Comedor Edmonton', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0008.jpg', 'Comedor', '200cm x 110cm', 'Comedor elegante con diseño sofisticado.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0008.jpg" alt="Comedor Alfa 8" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Edmonton</h3>
+              <p>8 personas</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Comedor 9 -->
+          <div class="muebleria" onclick="openModal('Comedor Edmonton', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0009.jpg', 'Comedor', '180cm x 100cm', 'Comedor moderno con diseño elegante.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0009.jpg" alt="Comedor Alfa 9" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Comedor Alfa 9</h3>
+              <p>8 personas</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Comedor 10 -->
+          <div class="muebleria" onclick="openModal('Comedor Ontario', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0010.jpg', 'Comedor', '220cm x 110cm', 'Comedor espacioso con diseño contemporáneo.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0010.jpg" alt="Comedor Alfa 10" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Ontario</h3>
+              <p>6 personas</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Comedor 11 -->
+          <div class="muebleria" onclick="openModal('Comedor Columbia', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0011.jpg', 'Comedor', '160cm x 90cm', 'Comedor moderno con diseño minimalista.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0011.jpg" alt="Comedor Alfa 11" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Columbia</h3>
+              <p>6 personas</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Comedor 12 -->
+          <div class="muebleria" onclick="openModal('Comedor Columbia', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0012.jpg', 'Comedor', '200cm x 110cm', 'Comedor elegante con acabados de lujo.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0012.jpg" alt="Comedor Alfa 12" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Columbia</h3>
+              <p>10 personas</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Comedor 13 -->
+          <div class="muebleria" onclick="openModal('Comedor Columbia', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0013.jpg', 'Comedor', '180cm x 100cm', 'Comedor moderno con diseño funcional.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0013.jpg" alt="Comedor Alfa 13" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Columbia</h3>
+              <p>12 personas</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Comedor 14 -->
+          <div class="muebleria" onclick="openModal('Comedor Dubai', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0014.jpg', 'Comedor', '240cm x 120cm', 'Comedor amplio con diseño clásico.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0014.jpg" alt="Comedor Alfa 14" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Dubai</h3>
+              <p>8 personas</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Comedor 15 -->
+          <div class="muebleria" onclick="openModal('Comedor Dubai', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0015.jpg', 'Comedor', '160cm x 90cm', 'Comedor moderno con diseño minimalista.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0015.jpg" alt="Comedor Alfa 15" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Dubai</h3>
+              <p>4 personas</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Comedor 16 -->
+          <div class="muebleria" onclick="openModal('Comedor Warner', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0016.jpg', 'Comedor', '200cm x 110cm', 'Comedor elegante con acabados de lujo.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0016.jpg" alt="Comedor Alfa 16" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Warner</h3>
+              <p>8 personas</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+          
+          <!-- Accesorio 1 -->
+          <div class="muebleria" onclick="openModal('Accesorio Bourbon', 'Alfa/accesorios/Catalogo Alfa JUNIO 2024 email-58-61_page-0001.jpg', 'Accesorio', '50cm x 30cm', 'Elegante accesorio decorativo para el hogar.')">
+            <img src="Alfa/accesorios/Catalogo Alfa JUNIO 2024 email-58-61_page-0001.jpg" alt="Accesorio Alfa 1" />
+            <div class="info">
+              <p>Accesorio</p>
+              <h3>Bourbon</h3>
+              <p>Decorativo</p>
+              <p>Color: Natural</p>
+            </div>
+          </div>
+
+          <!-- Accesorio 2 -->
+          <div class="muebleria" onclick="openModal('Accesorio Bourbon', 'Alfa/accesorios/Catalogo Alfa JUNIO 2024 email-58-61_page-0002.jpg', 'Accesorio', '45cm x 25cm', 'Accesorio moderno para complementar tu espacio.')">
+            <img src="Alfa/accesorios/Catalogo Alfa JUNIO 2024 email-58-61_page-0002.jpg" alt="Accesorio Alfa 2" />
+            <div class="info">
+              <p>Accesorio</p>
+              <h3>Bourbon</h3>
+              <p>Decorativo</p>
+              <p>Color: Madera</p>
+            </div>
+          </div>
+
+          <!-- Accesorio 3 -->
+          <div class="muebleria" onclick="openModal('Accesorio Oregon', 'Alfa/accesorios/Catalogo Alfa JUNIO 2024 email-58-61_page-0003.jpg', 'Accesorio', '40cm x 20cm', 'Accesorio decorativo con diseño contemporáneo.')">
+            <img src="Alfa/accesorios/Catalogo Alfa JUNIO 2024 email-58-61_page-0003.jpg" alt="Accesorio Alfa 3" />
+            <div class="info">
+              <p>Accesorio</p>
+              <h3>Oregon</h3>
+              <p>Decorativo</p>
+              <p>Color: Natural</p>
+            </div>
+          </div>
+
+          <!-- Accesorio 4 -->
+          <div class="muebleria" onclick="openModal('Accesorio Oregon', 'Alfa/accesorios/Catalogo Alfa JUNIO 2024 email-58-61_page-0004.jpg', 'Accesorio', '35cm x 15cm', 'Accesorio elegante para dar un toque especial a tu hogar.')">
+            <img src="Alfa/accesorios/Catalogo Alfa JUNIO 2024 email-58-61_page-0004.jpg" alt="Accesorio Alfa 4" />
+            <div class="info">
+              <p>Accesorio</p>
+              <h3>Oregon</h3>
+              <p>Decorativo</p>
+              <p>Color: Madera</p>
+            </div>
+          </div>
+
+          <!-- Buffet 1 -->
+          <div class="muebleria" onclick="openModal('Buffet Bourbon', 'Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0001.jpg', 'Buffet', '180cm x 45cm', 'Buffet elegante con diseño moderno y amplio espacio de almacenamiento.')">
+            <img src="Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0001.jpg" alt="Buffet Alfa 1" />
+            <div class="info">
+              <p>Buffet</p>
+              <h3>Bourbon</h3>
+              <p>Diseño Moderno</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Buffet 2 -->
+          <div class="muebleria" onclick="openModal('Buffet Edmonton', 'Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0002.jpg', 'Buffet', '200cm x 50cm', 'Buffet contemporáneo con múltiples compartimentos.')">
+            <img src="Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0002.jpg" alt="Buffet Alfa 2" />
+            <div class="info">
+              <p>Buffet</p>
+              <h3>Edmonton</h3>
+              <p>Diseño Contemporáneo</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Buffet 3 -->
+          <div class="muebleria" onclick="openModal('Buffet Dubai', 'Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0003.jpg', 'Buffet', '160cm x 45cm', 'Buffet minimalista con acabados premium.')">
+            <img src="Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0003.jpg" alt="Buffet Alfa 3" />
+            <div class="info">
+              <p>Buffet</p>
+              <h3>Dubai</h3>
+              <p>Diseño Minimalista</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Buffet 4 -->
+          <div class="muebleria" onclick="openModal('Buffet Warner', 'Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0004.jpg', 'Buffet', '220cm x 50cm', 'Buffet espacioso con diseño clásico.')">
+            <img src="Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0004.jpg" alt="Buffet Alfa 4" />
+            <div class="info">
+              <p>Buffet</p>
+              <h3>Warner</h3>
+              <p>Diseño Clásico</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Buffet 5 -->
+          <div class="muebleria" onclick="openModal('Buffet Tatum', 'Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0005.jpg', 'Buffet', '180cm x 45cm', 'Buffet elegante con vitrina incorporada.')">
+            <img src="Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0005.jpg" alt="Buffet Alfa 5" />
+            <div class="info">
+              <p>Buffet</p>
+              <h3>Tatum</h3>
+              <p>Con Vitrina</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Buffet 6 -->
+          <div class="muebleria" onclick="openModal('Buffet Sidney', 'Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0006.jpg', 'Buffet', '200cm x 50cm', 'Buffet moderno con estantes ajustables.')">
+            <img src="Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0006.jpg" alt="Buffet Alfa 6" />
+            <div class="info">
+              <p>Buffet</p>
+              <h3>Sidney</h3>
+              <p>Estantes Ajustables</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Buffet 7 -->
+          <div class="muebleria" onclick="openModal('Buffet Oporto', 'Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0007.jpg', 'Buffet', '160cm x 45cm', 'Buffet compacto con diseño funcional.')">
+            <img src="Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0007.jpg" alt="Buffet Alfa 7" />
+            <div class="info">
+              <p>Buffet</p>
+              <h3>Oporto</h3>
+              <p>Diseño Funcional</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Buffet 8 -->
+          <div class="muebleria" onclick="openModal('Buffet Hannover', 'Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0008.jpg', 'Buffet', '220cm x 50cm', 'Buffet elegante con acabados de lujo.')">
+            <img src="Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0008.jpg" alt="Buffet Alfa 8" />
+            <div class="info">
+              <p>Buffet</p>
+              <h3>Hannover</h3>
+              <p>Acabados de Lujo</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Comedor 17 -->
+          <div class="muebleria" onclick="openModal('Comedor Tatum', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0017.jpg', 'Comedor', '180cm x 100cm', 'Comedor moderno con diseño elegante.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0017.jpg" alt="Comedor Alfa 17" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Tatum</h3>
+              <p>8 personas</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Comedor 18 -->
+          <div class="muebleria" onclick="openModal('Comedor Budapest', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0018.jpg', 'Comedor', '220cm x 110cm', 'Comedor espacioso con diseño contemporáneo.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0018.jpg" alt="Comedor Alfa 18" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Comedor Alfa 18</h3>
+              <p>8 personas</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Comedor 19 -->
+          <div class="muebleria" onclick="openModal('Comedor Budapest', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0019.jpg', 'Comedor', '160cm x 90cm', 'Comedor moderno con diseño minimalista.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0019.jpg" alt="Comedor Alfa 19" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Budapest</h3>
+              <p>8 personas</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Comedor 20 -->
+          <div class="muebleria" onclick="openModal('Comedor Sidney', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0020.jpg', 'Comedor', '200cm x 110cm', 'Comedor elegante con acabados de lujo.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0020.jpg" alt="Comedor Alfa 20" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Sidney</h3>
+              <p>6 personas</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Comedor 21 -->
+          <div class="muebleria" onclick="openModal('Comedor Sidney', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0021.jpg', 'Comedor', '180cm x 100cm', 'Comedor moderno con diseño funcional.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0021.jpg" alt="Comedor Alfa 21" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Sidney</h3>
+              <p>6 personas</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Comedor 22 -->
+          <div class="muebleria" onclick="openModal('Comedor Sidney', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0022.jpg', 'Comedor', '240cm x 120cm', 'Comedor amplio con diseño clásico.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0022.jpg" alt="Comedor Alfa 22" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Sidney</h3>
+              <p>6 personas</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Comedor 23 -->
+          <div class="muebleria" onclick="openModal('Comedor Guinea', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0023.jpg', 'Comedor', '160cm x 90cm', 'Comedor moderno con diseño minimalista.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0023.jpg" alt="Comedor Alfa 23" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Guinea</h3>
+              <p>6 personas</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Comedor 24 -->
+          <div class="muebleria" onclick="openModal('Comedor Meerlot', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0024.jpg', 'Comedor', '200cm x 110cm', 'Comedor elegante con diseño sofisticado.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0024.jpg" alt="Comedor Alfa 24" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Merlot</h3>
+              <p>6 personas</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Comedor 25 -->
+          <div class="muebleria" onclick="openModal('Comedor Merlot', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0025.jpg', 'Comedor', '180cm x 100cm', 'Comedor moderno con diseño elegante.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0025.jpg" alt="Comedor Alfa 25" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Merlot</h3>
+              <p>6 personas</p>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Comedor 26 -->
+          <div class="muebleria" onclick="openModal('Comedor Baltimore', 'Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0026.jpg', 'Comedor', '220cm x 110cm', 'Comedor espacioso con diseño contemporáneo.')">
+            <img src="Alfa/comedores/Catalogo Alfa JUNIO 2024 email-22-47_page-0026.jpg" alt="Comedor Alfa 26" />
+            <div class="info">
+              <p>Comedor</p>
+              <h3>Baltimore</h3>
+              <p>6 personas</p>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Modal para detalles del producto -->
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <img id="modal-image" src="" alt="Imagen del producto" class="modal-image">
+            <div class="modal-details">
+              <h2 id="modal-title"></h2>
+              <p id="modal-category"></p>
+              <p id="modal-dimensions"></p>
+              <p id="modal-description"></p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <script src="muebleria4.js"></script>
+</body>
+</html>

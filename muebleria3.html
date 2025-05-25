@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="icon" href="favicon.png" type="image/png">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mueblería Santino</title>
+  <link rel="stylesheet" href="muebleria3.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+    <!-- ENCABEZADO (HEADER) -->
+    <header>
+        <div class="logo">
+            <img src="imagen/logo.png" alt="Sector Mueblero de Durango" class="logo-img">     
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="eventos.html">EVENTOS</a></li>
+                <li class="dropdown">
+                    <a href="#">CATEGORIAS</a>
+                    <ul class="dropdown-content">
+                        <li><a href="comedores.html">Comedor</a></li>
+                        <li><a href="buffeteros.html">Buffeteros</a></li>
+                        <li><a href="cocinas.html">Cocinas</a></li>
+                        <li><a href="islas.html">Islas</a></li>
+                        <li><a href="recamaras.html">Recámaras</a></li>
+                        <li><a href="accesorios.html">Accesorios</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#equipo">EQUIPO</a></li>
+                <li><a href="index.html#contacto">CONTACTO</a></li>
+                <div class="search-container">
+                  <input type="text" placeholder="Buscar productos...">
+                  <button><i class="fas fa-search"></i></button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- FILTROS DE CATEGORÍA -->
+    <div class="category-filters">
+        <button onclick="filterByCategory('todos')">Todos</button>
+        <div class="color-button">
+            <button>Color</button>
+            <div class="color-options">
+                <button onclick="filterByCategory('tabaco')">Tabaco</button>
+                <button onclick="filterByCategory('nogal')">Nogal</button>
+            </div>
+        </div>
+    </div>
+
+    <!--productos-->
+<body>
+    <section class="catalogo">
+        <h2 class="titulo-catalogo">Catálogo Mueblería Santino</h2>
+  
+          <div class="grid-mueblerias">
+
+          <!-- Producto 1 -->
+          <div class="muebleria" onclick="openModal('Cocina Clásico', 'santino/IMG_1230.jpg', 'Comedor', '160cm x 90cm', 'Mesa para 6 personas, diseño clásico con acabado en color tabaco. Incluye 6 sillas tapizadas con tela de alta calidad.')">
+            <img src="santino/IMG_1230.jpg" alt="Comedor Clásico" />
+            <div class="info">
+              <p>Cocina</p>
+              <h3>Clásico</h3>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+      
+          <!-- Producto 2 -->
+          <div class="muebleria" onclick="openModal('Cocina Moderno', 'santino/IMG_2780.jpg', 'Comedor', '180cm x 100cm', 'Mesa para 8 personas, diseño moderno con acabado en color nogal. Base metálica y superficie de madera sólida.')">
+            <img src="santino/IMG_2780.jpg" alt="Comedor Moderno" />
+            <div class="info">
+              <p>Cocina</p>
+              <h3>Moderno</h3>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+      
+          <!-- Producto 3 -->
+          <div class="muebleria" onclick="openModal('Cocina Contemporáneo', 'santino/IMG_2841.jpg', 'Buffet', '160cm x 45cm', 'Buffet contemporáneo con acabado en color tabaco. Múltiples compartimentos y puertas corredizas.')">
+            <img src="santino/IMG_2841.jpg" alt="Buffet Contemporáneo" />
+            <div class="info">
+              <p>Cocina</p>
+              <h3>Contemporáneo</h3>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+      
+          <!-- Producto 4 -->
+          <div class="muebleria" onclick="openModal('Cocina Elegante', 'santino/IMG_3790.jpg', 'Comedor', '200cm x 110cm', 'Mesa para 8 personas, diseño elegante con acabado en color nogal. Incluye 8 sillas tapizadas en tela premium.')">
+            <img src="santino/IMG_3790.jpg" alt="Comedor Elegante" />
+            <div class="info">
+              <p>Cocina</p>
+              <h3>Elegante</h3>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+      
+          <!-- Producto 5 -->
+          <div class="muebleria" onclick="openModal('Cocina Minimalista', 'santino/IMG_5933.jpg', 'Comedor', '140cm x 80cm', 'Mesa para 4 personas con diseño minimalista. Acabado en color tabaco y sillas ergonómicas.')">
+            <img src="santino/IMG_5933.jpg" alt="Comedor Minimalista" />
+            <div class="info">
+              <p>Cocina</p>
+              <h3>Minimalista</h3>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+      
+          <!-- Producto 6 -->
+          <div class="muebleria" onclick="openModal('Cocina Moderno', 'santino/IMG_8170.jpg', 'Buffet', '180cm x 50cm', 'Buffet moderno con acabado en color nogal. Diseño espacioso con cajones y estantes.')">
+            <img src="santino/IMG_8170.jpg" alt="Buffet Moderno" />
+            <div class="info">
+              <p>Cocina</p>
+              <h3>Moderno</h3>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Producto 7 -->
+          <div class="muebleria" onclick="openModal('Cocina Ejecutivo', 'santino/IMG_9233.jpg', 'Comedor', '220cm x 110cm', 'Mesa para 8 personas con diseño ejecutivo. Acabado en color tabaco y sillas tapizadas en piel sintética.')">
+            <img src="santino/IMG_9233.jpg" alt="Comedor Ejecutivo" />
+            <div class="info">
+              <p>Cocina</p>
+              <h3>Ejecutivo</h3>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Producto 8 -->
+          <div class="muebleria" onclick="openModal('Cocina Vintage', 'santino/17553ffc-e0db-4984-87dd-e3ab6bb1241d.JPG', 'Comedor', '160cm x 90cm', 'Mesa para 6 personas con estilo vintage. Acabado en color nogal y sillas con respaldo alto.')">
+            <img src="santino/17553ffc-e0db-4984-87dd-e3ab6bb1241d.JPG" alt="Comedor Vintage" />
+            <div class="info">
+              <p>Cocina</p>
+              <h3>Vintage</h3>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Producto 9 -->
+          <div class="muebleria" onclick="openModal('Cocina Rústico', 'santino/28B72636-C7C6-4F0D-A482-467B38A7EB4F.JPG', 'Comedor', '180cm x 100cm', 'Mesa para 6 personas con diseño rústico. Acabado en color tabaco y sillas con asientos acolchados.')">
+            <img src="santino/28B72636-C7C6-4F0D-A482-467B38A7EB4F.JPG" alt="Comedor Rústico" />
+            <div class="info">
+              <p>Cocina</p>
+              <h3>Rústico</h3>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Producto 10 -->
+          <div class="muebleria" onclick="openModal('Cocina Clásico', 'santino/7c3f60f2-3048-4fd7-a4ac-5f5bc20f0292.JPG', 'Buffet', '170cm x 45cm', 'Buffet clásico con acabado en color nogal. Amplio espacio de almacenamiento y detalles tallados.')">
+            <img src="santino/7c3f60f2-3048-4fd7-a4ac-5f5bc20f0292.JPG" alt="Buffet Clásico" />
+            <div class="info">
+              <p>Cocina</p>
+              <h3>Clásico</h3>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+          <!-- Producto 11 -->
+          <div class="muebleria" onclick="openModal('Cocina Contemporáneo', 'santino/c9bea954-b84e-434b-90ca-447b6210ec3e.JPG', 'Comedor', '200cm x 110cm', 'Mesa para 8 personas con diseño contemporáneo. Acabado en color tabaco y sillas modernas.')">
+            <img src="santino/c9bea954-b84e-434b-90ca-447b6210ec3e.JPG" alt="Comedor Contemporáneo" />
+            <div class="info">
+              <p>Cocina</p>
+              <h3>Contemporáneo</h3>
+              <p>Color: Tabaco</p>
+            </div>
+          </div>
+
+          <!-- Producto 12 -->
+          <div class="muebleria" onclick="openModal('Cocina Escandinavo', 'santino/IMG_2779.GIF', 'Comedor', '160cm x 90cm', 'Mesa para 6 personas con diseño escandinavo. Acabado en color nogal y sillas minimalistas.')">
+            <img src="santino/IMG_2779.GIF" alt="Comedor Escandinavo" />
+            <div class="info">
+              <p>Cocina</p>
+              <h3>Escandinavo</h3>
+              <p>Color: Nogal</p>
+            </div>
+          </div>
+
+    </section>
+    
+    <script>
+      let currentPosition = 0;
+      const itemsPerPage = 3;
+      
+      function moveCarousel(direction) {
+        const container = document.querySelector('.grid-mueblerias');
+        const items = container.children;
+        const maxPosition = Math.ceil(items.length / itemsPerPage) - 1;
+        
+        currentPosition = Math.max(0, Math.min(currentPosition + direction, maxPosition));
+        const translateX = currentPosition * -33.33;
+        
+        container.style.transform = `translateX(${translateX}%)`;
+      }
+    </script>
+
+    <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector("header");
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+  </script>
+  
+    <script src="search.js"></script>
+    <script src="muebleria3.js"></script>
+
+<!-- Modal -->
+    <div class="modal" id="productModal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <img id="modalImage" src="" alt="Producto" class="modal-image">
+        <div class="modal-details">
+          <h2 id="modalTitle"></h2>
+          <p id="modalCategory"></p>
+          <p id="modalMeasures"></p>
+          <p id="modalDescription"></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openModal(title, image, category, measures, description) {
+        document.getElementById('modalTitle').textContent = title;
+        document.getElementById('modalImage').src = image;
+        document.getElementById('modalCategory').textContent = 'Categoría: ' + category;
+        document.getElementById('modalMeasures').textContent = 'Medidas: ' + measures;
+        document.getElementById('modalDescription').textContent = description;
+        
+        const modal = document.getElementById('productModal');
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        const modal = document.getElementById('productModal');
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      // Cerrar modal al hacer clic fuera del contenido
+      document.getElementById('productModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+          closeModal();
+        }
+      });
+    </script>
+</body>
+</html>

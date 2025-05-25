@@ -1,0 +1,883 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #f8f8f8;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    transition: background 0.3s ease, padding 0.3s ease;
+    z-index: 1000;
+}
+
+header.scrolled {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 50px;
+}
+
+/* Logo */
+.logo-container h1 {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.logo-img {
+    height: 60px; /* puedes ajustar el tamaño */
+    object-fit: contain;
+  }
+  
+
+/* NAV */
+nav ul {
+    display: flex;
+  align-items: center; /* Centra verticalmente todo en el nav */
+  justify-content: space-between;
+ 
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+
+    padding: 10px 15px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav ul li a:hover {
+    transform: scale(1.1);
+    color: #f4c26b;
+    border-bottom: 2px solid #f4c26b;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    border-radius: 4px;
+    padding: 8px 0;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    color: #f4c26b;
+    border-bottom: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background-image: url('imagen/imagen1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* SIDEBAR DE REDES SOCIALES */
+.social-sidebar {
+    position: fixed;
+    left: 20px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.social-sidebar a {
+    color: white;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.social-sidebar a:hover {
+    transform: scale(1.2);
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav ul {
+        margin: 20px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .social-sidebar {
+        left: 10px;
+        bottom: 20px;
+    }
+
+    .chat-bubble {
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
+/* Sección Sobre Nosotros */
+.sobre-nosotros {
+    display: flex; /* Organiza en filas (columnas en este caso) */
+    align-items: center; /* Alinea verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    background-color: #ffffff; /* Color oscuro de fondo */
+    color: rgb(0, 0, 0); /* Color del texto */
+    padding: 80px 10%;
+}
+
+/* Contenedor de texto */
+.sobre-nosotros .contenido {
+    flex: 1; /* Ocupa 50% del ancho */
+    padding-right: 50px;
+}
+
+.sobre-nosotros h2 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.sobre-nosotros h3 {
+    font-size: 1.8rem;
+    color: #c4a77d; /* Color dorado para el subtítulo */
+    margin-bottom: 20px;
+}
+
+.sobre-nosotros p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Contenedor de imagen */
+.sobre-nosotros .imagen {
+    flex: 1; /* Ocupa 50% del ancho */
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-nosotros .imagen img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .sobre-nosotros {
+        flex-direction: column; /* Cambia de fila a columna */
+        text-align: center;
+    }
+
+    .sobre-nosotros .contenido {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .sobre-nosotros .imagen img {
+        width: 80%;
+    }
+}
+
+.social-sidebar {
+    position: fixed;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 100;
+}
+
+.social-sidebar a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-sidebar a:hover {
+    transform: scale(1.2);
+}
+
+
+
+/* Sección Nuestra Alianza */
+.nuestra-alianza {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 80px 10%;
+}
+
+.nuestra-alianza h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.nuestra-alianza p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+/* GRID DE MUEBLERÍAS */
+.grid-mueblerias {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.muebleria {
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  height: 100%; /* Para que todas tengan misma altura */
+}
+
+.muebleria img {
+  width: 100%;
+  height: 200px; /* Tamaño fijo de imagen */
+  object-fit: cover;
+}
+
+.muebleria .info {
+  padding: 20px;
+  color: white;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.muebleria h3 {
+  font-size: 1.3rem;
+  color: #f8c471;
+  margin: 10px 0 5px;
+}
+
+.muebleria .info p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.muebleria .info p:first-child {
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+.muebleria-link {
+    display: block;
+    text-decoration: none;
+  }
+  
+  .muebleria .info {
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .muebleria .info p,
+  .muebleria .info h3 {
+    margin: 0.5rem 0;
+    color: #fff;
+  }
+  
+  .muebleria .info h3 {
+    color: #f4bb59;
+  }
+  
+
+/* Redes */
+.redes {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  padding-left: 1rem; /* Añade espacio desde el borde izquierdo */
+  margin-top: 1rem;
+}
+
+.redes a i {
+  font-size: 1.2rem;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.redes a i:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid-mueblerias {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .nuestros-servicios {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nuestros-servicios .contenido {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+}
+
+
+
+/* Efecto de zoom en imágenes */
+.imagen img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.imagen img:hover {
+    transform: scale(1.1); /* Aumenta un 10% el tamaño */
+}
+/* Efecto de zoom en tarjetas de promociones */
+.muebleria img{
+    transition: transform 0.3s ease-in-out;
+}
+
+.muebleria img:hover {
+    transform: scale(1.1);
+}
+
+/* Ocultar inicialmente la Hero Section y Sobre Nosotros */
+.hero, .sobre-nosotros {
+    opacity: 0;
+    transform: translateY(50px); /* Efecto de deslizamiento */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Clase que se activará cuando el usuario haga scroll */
+.hero.visible, .sobre-nosotros.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* SECCIÓN CONTACTO */
+.contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    color: white;
+    padding: 80px 10%;
+    gap: 50px;
+}
+
+/* Centrar mejor la información de contacto */
+.contacto-info {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+/* Aumentar el espacio entre cada dato de contacto */
+.contacto-info p {
+    font-size: 1.2rem;
+    margin-bottom: 20px; /* Más espacio entre líneas */
+}
+
+/* Ajustar iconos y texto */
+.contacto-info i {
+    margin-right: 12px;
+    font-size: 1.5rem; /* Íconos un poco más grandes */
+    color: #c4a77d;
+}
+
+/* Aumentar separación de los íconos de redes sociales */
+.redes-sociales {
+    margin-top: 30px; /* Más espacio arriba */
+}
+
+.redes-sociales a {
+    font-size: 1.6rem; /* Íconos más grandes */
+    margin: 0 10px; /* Más espacio entre los íconos */
+}
+
+/* FORMULARIO DE CONTACTO */
+.formulario-contacto {
+    flex: 1;
+    background-color: #333;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group div {
+    width: 48%;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #a38b6d;
+    outline: none;
+    box-shadow: 0 0 5px rgba(163, 139, 109, 0.5);
+}
+
+input:invalid, textarea:invalid {
+    border-color: #ff4444;
+}
+
+textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #a38b6d;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #8c755a;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .contacto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .formulario-contacto {
+        margin-top: 30px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group div {
+        width: 100%;
+    }
+}
+
+/* SECCIÓN EMPRESAS */
+.empresas {
+    text-align: center;
+    padding: 60px 10%;
+    background-color: #222;
+    color: white;
+}
+
+.empresas h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+
+/* CAMBIO */
+/* GRID DE EMPRESAS */
+.grid-empresas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.empresa {
+    position: relative;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.empresa img {
+    width: 80%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.empresa:hover {
+    transform: scale(1.05);
+    background-color: #444;
+}
+
+.empresa:hover img {
+    filter: grayscale(0%);
+}
+
+.empresa-info {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px;
+    text-align: center;
+}
+
+.empresa-info.mostrar {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.empresa-info h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.empresa-info p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.empresa-info i {
+    margin-right: 8px;
+    color: #007bff;
+}
+
+.cerrar-info {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cerrar-info:hover {
+    background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .grid-empresas {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+
+    .empresa {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-empresas {
+        grid-template-columns: repeat(1, 1fr); /* 1 columna en móviles */
+    }
+
+    .empresa {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+
+/* COMENTARIOS */
+/*NUEVOOOOO*/
+/* SECCIÓN DE TESTIMONIOS */
+.testimonios {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .testimonios h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #222;
+  }
+  
+  .testimonios-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 60px 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .testimonio-activo {
+    max-width: 600px;
+  }
+  
+  .testimonio-activo .comentario {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .testimonio-activo .autor {
+    font-weight: bold;
+    color: #222;
+  }
+  
+  /* Flechas */
+  .flecha {
+    font-size: 2rem;
+    color: #888;
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: color 0.3s ease;
+    z-index: 2;
+  }
+  
+  .flecha:hover {
+    color: #a38b6d;
+  }
+  
+  .flecha.izquierda {
+    left: 20px;
+  }
+  
+  .flecha.derecha {
+    right: 20px;
+  }
+  
+  /* Puntos */
+  .indicadores {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .punto {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .punto.activo {
+    background: #a38b6d;
+  }
+  
+  /*Barra de busqueda */
+
+  .search-container {
+    display: flex;
+    align-items: center; /* Centra el input y la lupa verticalmente */
+    background-color: #222;
+    border-radius: 20px;
+    padding: 5px 12px;
+    height: 35px;
+    margin-left: 20px;
+  }
+  
+  .search-container input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .search-container button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding-left: 5px;
+    position: relative;
+    top: -7px; /* 🔼 Sube ligeramente la lupa */
+  }
+
+  .search-container button:hover {
+    transform: scale(1.2); /* Agranda al pasar el mouse */
+    color: #f4c26b; /* Cambia el color, opcional */
+  }
+
+  /*muebleria1 click*/
+
+  .muebleria {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .muebleria:hover {
+    transform: scale(1.02);
+  }
+  
+/*para que sea lento el scroll*/
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  
+  
+  
+  

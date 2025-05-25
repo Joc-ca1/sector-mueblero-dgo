@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Mueblería</title>
+    <link rel="stylesheet" href="eventos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="search.js"></script>
+    
+</head>
+<body>
+
+   <!-- ENCABEZADO (HEADER) -->
+   <header>
+    <div class="logo">
+        <img src="imagen/logo.png" alt="Sector Mueblero de Durango" class="logo-img">     
+    </div>
+    <nav>
+        <ul>
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="eventos.html">EVENTOS</a></li>
+          <li class="dropdown">
+            <a href="#">CATEGORIAS</a>
+            <ul class="dropdown-content">
+                <li><a href="comedores.html">Comedor</a></li>
+                <li><a href="buffeteros.html">Buffeteros</a></li>
+                <li><a href="cocinas.html">Cocinas</a></li>
+                <li><a href="islas.html">Islas</a></li>
+                <li><a href="recamaras.html">Recámaras</a></li>
+                <li><a href="accesorios.html">Accesorios</a></li>
+            </ul>
+        </li>
+          <li><a href="index.html#equipo">EQUIPO</a></li>
+          <li><a href="index.html#contacto">CONTACTO</a></li>
+            <div class="search-container">
+              <input type="text" placeholder="Buscar...">
+              <button><i class="fas fa-search"></i></button>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+
+    <main class="eventos-container">
+        <h1>Nuestros Eventos</h1>
+        <p class="descripcion-eventos">
+          A lo largo de los años, la Asociación de Fabricantes de Muebles ha participado activamente en exposiciones, ferias y eventos nacionales e internacionales, promoviendo el talento duranguense y la innovación en diseño y producción de muebles.
+        </p>
+       
+        
+        <div class="carousel-container">
+            <button class="carousel-button prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="eventos/466001565_18082854955548710_112217491726269594_n.jpg" alt="Evento 1">
+                    <div class="carousel-info">
+                        <h3>Exposición de Muebles 2024</h3>
+                        <p>Descubre nuestra nueva colección de muebles modernos y elegantes.</p>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="eventos/466638597_18470351980060987_8684103277910518360_n.jpg" alt="Evento 2">
+                    <div class="carousel-info">
+                        <h3>Feria del Hogar</h3>
+                        <p>Grandes descuentos y ofertas especiales en muebles para el hogar.</p>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="eventos/485659639_1531008121156112_4267694233569608758_n.jpg" alt="Evento 3">
+                    <div class="carousel-info">
+                        <h3>Diseño Interior 2024</h3>
+                        <p>Inspiración y tendencias para transformar tu espacio.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img src="eventos/480559267_638109165399011_4949279097073576448_n.jpg" alt="Evento 4">
+                  <div class="carousel-info">
+                      <h3>Diseño Interior 2024</h3>
+                      <p>Inspiración y tendencias para transformar tu espacio.</p>
+                  </div>
+              </div>
+
+
+            </div>
+            
+            <button class="carousel-button next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </main>
+
+    <script src="eventos.js"></script>
+</body>
+</html>

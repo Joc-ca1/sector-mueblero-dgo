@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buffeteros - Mueblería</title>
+    <link rel="stylesheet" href="buffeteros.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <script defer src="buffeteros.js"></script>
+     <script src="search.js"></script>
+</head>
+<!-- ENCABEZADO (HEADER) -->
+<header>
+    <div class="logo">
+        <img src="imagen/logo.png" alt="Sector Mueblero de Durango" class="logo-img">     
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="eventos.html">EVENTOS</a></li>
+            <li class="dropdown">
+                <a href="#">CATEGORIAS</a>
+                <ul class="dropdown-content">
+                    <li><a href="comedores.html">Comedor</a></li>
+                    <li><a href="buffeteros.html">Buffeteros</a></li>
+                    <li><a href="cocinas.html">Cocinas</a></li>
+                    <li><a href="islas.html">Islas</a></li>
+                    <li><a href="recamaras.html">Recámaras</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#equipo">EQUIPO</a></li>
+           <li><a href="index.html#contacto">CONTACTO</a></li>
+            <div class="search-container">
+              <input type="text" placeholder="Buscar...">
+              <button><i class="fas fa-search"></i></button>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="container">
+        <h1>Buffeteros</h1>
+        <div class="category-filters">
+            <button class="todos-button">Todos</button>
+            <div class="muebleria-button">
+                <button>Mueblería</button>
+                <div class="muebleria-options">
+                    <button data-muebleria="Alfa">Alfa</button>
+                    <button data-muebleria="Guadiana">Guadiana</button>
+                    <button data-muebleria="Romasa">Romasa</button>
+                </div>
+            </div>
+        </div>
+        <div class="productos-grid">
+            <!-- Buffeteros Alfa -->
+            <div class="muebleria" onclick="openModal('Buffetero Alfa 1', 'Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0001.jpg', 'Buffetero', '180cm x 45cm', 'Buffetero elegante con diseño moderno.')">
+                <img src="Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0001.jpg" alt="Buffetero Alfa 1" />
+                <div class="info">
+                    <p>Buffetero</p>
+                    <h3>Buffetero Alfa 1</h3>
+                    <p>Mueblería Alfa</p>
+                    <p>Color: Nogal</p>
+                </div>
+            </div>
+
+            <!-- Producto 27 -->
+        <div class="muebleria" onclick="openModal('Bufeet', 'guadiana/Buffet roma.jpg', 'Comedor', '1.38 m.')">
+                <img src="guadiana/Buffet roma.jpg" alt="buffet1" />
+             <div class="info">
+                 <p>Buffet</p>
+                <h3>Bufeet Roma</h3>
+                <p>Mueblería Guadiana</p>
+                <p>Color: tabaco</p>
+
+                 </div>
+            </div> 
+
+             <!-- Producto 7 -->
+           
+          <div class="muebleria" onclick="openModal('Bufetero Jaspen', 'romasa/Buffetero Jaspen SNSL.jpg', 'Comedor', '120-180cm x 90cm', 'Mesa extensible que se adapta de 4 a 6 personas. Sistema de extensión fácil de usar. Acabado en color nogal. Incluye 6 sillas con tapizado premium.')">
+            <img src="romasa/Buffetero Jaspen SNSL.jpg" alt="Mesa Elegante" />
+        <div class="info">
+          <p>Buffetero</p>
+          <h3>Jaspen SNSL</h3>
+          <p>Mueblería Romasa</p>
+          <p>Color: Nogal</p>
+        </div>
+      </div> 
+
+            <div class="muebleria" onclick="openModal('Buffetero Alfa 2', 'Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0002.jpg', 'Buffetero', '200cm x 45cm', 'Buffetero espacioso con acabados de lujo.')">
+                <img src="Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0002.jpg" alt="Buffetero Alfa 2" />
+                <div class="info">
+                    <p>Buffetero</p>
+                    <h3>Buffetero Alfa 2</h3>
+                    <p>Mueblería Alfa</p>
+                    <p>Color: Tabaco</p>
+                </div>
+            </div>
+
+                        <!-- Producto 28 -->
+            <div class="muebleria" onclick="openModal('Bufeet', 'guadiana/Buffet toledo.jpg', 'Bufetero', '1.20 m.')">
+            <img src="guadiana/Buffet toledo.jpg" alt="bufeet2" />
+            <div class="info">
+                <p>Buffet</p>
+                <h3>Bufeet Toledo</h3>
+                <p>Mueblería Guadiana</p>
+                <p>Color: tabaco</p>
+
+            </div>
+            </div> 
+
+            <div class="muebleria" onclick="openModal('Buffetero Alfa 3', 'Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0003.jpg', 'Buffetero', '160cm x 45cm', 'Buffetero moderno con diseño minimalista.')">
+                <img src="Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0003.jpg" alt="Buffetero Alfa 3" />
+                <div class="info">
+                    <p>Buffetero</p>
+                    <h3>Buffetero Alfa 3</h3>
+                    <p>Mueblería Alfa</p>
+                    <p>Color: Nogal</p>
+                </div>
+            </div>
+
+            <div class="muebleria" onclick="openModal('Buffetero Alfa 4', 'Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0004.jpg', 'Buffetero', '220cm x 45cm', 'Buffetero amplio con diseño contemporáneo.')">
+                <img src="Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0004.jpg" alt="Buffetero Alfa 4" />
+                <div class="info">
+                    <p>Buffetero</p>
+                    <h3>Buffetero Alfa 4</h3>
+                    <p>Mueblería Alfa</p>
+                    <p>Color: Tabaco</p>
+                </div>
+            </div>
+
+            <div class="muebleria" onclick="openModal('Buffetero Alfa 5', 'Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0005.jpg', 'Buffetero', '180cm x 45cm', 'Buffetero elegante con acabados premium.')">
+                <img src="Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0005.jpg" alt="Buffetero Alfa 5" />
+                <div class="info">
+                    <p>Buffetero</p>
+                    <h3>Buffetero Alfa 5</h3>
+                    <p>Mueblería Alfa</p>
+                    <p>Color: Nogal</p>
+                </div>
+            </div>
+
+            <div class="muebleria" onclick="openModal('Buffetero Alfa 6', 'Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0006.jpg', 'Buffetero', '200cm x 45cm', 'Buffetero moderno con diseño versátil.')">
+                <img src="Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0006.jpg" alt="Buffetero Alfa 6" />
+                <div class="info">
+                    <p>Buffetero</p>
+                    <h3>Buffetero Alfa 6</h3>
+                    <p>Mueblería Alfa</p>
+                    <p>Color: Tabaco</p>
+                </div>
+            </div>
+
+            <div class="muebleria" onclick="openModal('Buffetero Alfa 7', 'Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0007.jpg', 'Buffetero', '180cm x 45cm', 'Buffetero clásico con detalles modernos.')">
+                <img src="Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0007.jpg" alt="Buffetero Alfa 7" />
+                <div class="info">
+                    <p>Buffetero</p>
+                    <h3>Buffetero Alfa 7</h3>
+                    <p>Mueblería Alfa</p>
+                    <p>Color: Nogal</p>
+                </div>
+            </div>
+
+            <div class="muebleria" onclick="openModal('Buffetero Alfa 8', 'Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0008.jpg', 'Buffetero', '220cm x 45cm', 'Buffetero contemporáneo con amplio espacio de almacenamiento.')">
+                <img src="Alfa/buffets/Catalogo Alfa JUNIO 2024 email-49-56_page-0008.jpg" alt="Buffetero Alfa 8" />
+                <div class="info">
+                    <p>Buffetero</p>
+                    <h3>Buffetero Alfa 8</h3>
+                    <p>Mueblería Alfa</p>
+                    <p>Color: Tabaco</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para detalles del producto -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <img src="" alt="" class="modal-image" id="modal-image">
+            <div class="modal-details">
+                <h2 id="modal-title"></h2>
+                <p id="modal-type"></p>
+                <p id="modal-dimensions"></p>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

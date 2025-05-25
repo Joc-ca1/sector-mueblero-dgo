@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocinas - Muebleria</title>
+    <link rel="stylesheet" href="cocinas.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script defer src="cocinas.js"></script>
+     <script src="search.js"></script>
+</head>
+
+<!-- ENCABEZADO (HEADER) -->
+<header>
+    <div class="logo">
+        <img src="imagen/logo.png" alt="Sector Mueblero de Durango" class="logo-img">     
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="eventos.html">EVENTOS</a></li>
+            <li class="dropdown">
+                <a href="#">CATEGORIAS</a>
+                <ul class="dropdown-content">
+                    <li><a href="comedores.html">Comedor</a></li>
+                    <li><a href="buffeteros.html">Buffeteros</a></li>
+                    <li><a href="cocinas.html">Cocinas</a></li>
+                    <li><a href="islas.html">Islas</a></li>
+                    <li><a href="recamaras.html">Recámaras</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                </ul>
+            </li>
+           <li><a href="index.html#equipo">EQUIPO</a></li>
+           <li><a href="index.html#contacto">CONTACTO</a></li>
+            <div class="search-container">
+              <input type="text" placeholder="Buscar...">
+              <button><i class="fas fa-search"></i></button>
+            </div>
+        </ul>
+                   
+    </nav>
+
+</header>
+
+<body>
+       <div class="container">
+        <h1>COCINAS</h1>
+
+        <div class="category-filters">
+            <button class="todos-button">Todos</button>
+            <div class="muebleria-button">
+                <button>Mueblería</button>
+                <div class="muebleria-options">
+                    <button data-muebleria="Santino">Santino</button>
+                    <button data-muebleria="Romasa">Romasa</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="productos-grid">
+            <!-- Productos de Santino -->
+            <div class="muebleria" onclick="openModal('Cocina Moderna', 'santino/17553ffc-e0db-4984-87dd-e3ab6bb1241d.JPG', 'Cocina Integral', 'Personalizable', 'Cocina moderna con acabados de alta calidad y diseño funcional.')">
+                <img src="santino/17553ffc-e0db-4984-87dd-e3ab6bb1241d.JPG" alt="Cocina Santino">
+                <div class="info">
+                    <h3>Cocina Moderna</h3>
+                    <p>Mueblería Santino</p>
+                    <p>Color: Blanco y Gris</p>
+                </div>
+            </div>
+
+            <!-- Producto 1 -->
+        <div class="muebleria" onclick="openModal('Cocina Madrid', 'romasa/Cocina Madrid.jpg', 'Cocina Integral', 'Personalizable', 'Cocina integral con acabados en color tabaco y diseño clásico.')">
+                <img src="romasa/Cocina Madrid.jpg" alt="Cocina Madrid" />
+                <div class="info">
+                    <p>Cocina</p>
+                    <h3>Madrid</h3>
+                    <p>Mueblería Romasa</p>
+                    <p>Color: Tabaco</p>
+                </div>
+            </div>
+
+        <div class="muebleria" onclick="openModal('Cocina', 'santino/28B72636-C7C6-4F0D-A482-467B38A7EB4F.JPG', 'Cocina Integral', 'Personalizable', 'Cocina integral con acabados en color tabaco y diseño clásico.')">
+                <img src="santino/28B72636-C7C6-4F0D-A482-467B38A7EB4F.JPG" alt="Cocina Santino">
+                <div class="info">
+                    <h3>Cocina Contemporánea</h3>
+                    <p>Mueblería Santino</p>
+                    <p>Color: Madera Natural</p>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+        <div class="muebleria" onclick="openModal('Cocina ', 'romasa/Cocina Ambar.jpg', 'Comedor', '1.38 m.')">
+                <img src="romasa/Cocina Ambar.jpg" alt="Cocina ambar" />
+                <div class="info">
+                    <p>Cocina</p>
+                    <h3>Ambar</h3>
+                    <p>Mueblería Romasa</p>
+                    <p>Color tabaco</p>
+                </div>
+            </div>
+
+        <div class="muebleria" onclick="openModal('Cocina', 'santino/7c3f60f2-3048-4fd7-a4ac-5f5bc20f0292.JPG', 'Comedor', '1.38 m.')">
+                <img src="santino/7c3f60f2-3048-4fd7-a4ac-5f5bc20f0292.JPG" alt="Cocina Santino">
+                <div class="info">
+                    <h3>Cocina Minimalista</h3>
+                    <p>Mueblería Santino</p>
+                    <p>Color: Blanco y Negro</p>
+                </div>
+            </div>
+
+                    <!-- Producto 12 -->
+        <div class="muebleria" onclick="openModal('Cocina', 'romasa/JASPEN ESCUADRA.jpg', 'Comedor', '1.38 m.')">
+            <img src="romasa/JASPEN ESCUADRA.jpg" alt="Mesa Elegante" />
+            <div class="info">
+                <p>Cocina</p>
+                <h3>Jaspen Escuadra</h3>
+                <p>Mueblería Romasa</p>
+                <p>Color: Tabaco</p>
+
+            </div>
+        </div>
+
+        <div class="muebleria" onclick="openModal('Cocina', 'santino/IMG_1230.jpg', 'Comedor', '1.38 m.')">
+                <img src="santino/IMG_1230.jpg" alt="Cocina Santino">
+                <div class="info">
+                    <h3>Cocina Minimalista</h3>
+                    <p>Mueblería Santino</p>
+                    <p>Color: Blanco</p>
+                </div>
+            </div>
+
+                        <!-- Producto 14 -->
+        <div class="muebleria" onclick="openModal('Cocina', 'romasa/Cocina Victoria Gris.jpg', 'Comedor', '1.38 m.')">
+                <img src="romasa/Cocina Victoria Gris.jpg" alt="Mesa Elegante" />
+                <div class="info">
+                <p>Cocina</p>
+                <h3>Mesa Roma</h3>
+                <p>Mueblería Romasa</p>
+                <p>Victoria gris</p>
+
+                </div>
+            </div>   
+
+        <div class="muebleria" onclick="openModal('Cocina', 'santino/IMG_2780.jpg', 'Comedor', '1.38 m.')">
+                <img src="santino/IMG_2780.jpg" alt="Cocina Santino">
+                <div class="info">
+                    <h3>Cocina Integral</h3>
+                    <p>Mueblería Santino</p>
+                    <p>Color: Gris y Madera</p>
+                </div>
+            </div>
+
+        <div class="muebleria" onclick="openModal('Cocina', 'santino/IMG_2841.jpg', 'Comedor', '1.38 m.')">
+                <img src="santino/IMG_2841.jpg" alt="Cocina Santino">
+                <div class="info">
+                    <h3>Cocina Moderna Plus</h3>
+                    <p>Mueblería Santino</p>
+                    <p>Color: Blanco y Negro</p>
+                </div>
+            </div>
+
+        <div class="muebleria" onclick="openModal('Cocina', 'santino/IMG_3790.jpg', 'Comedor', '1.38 m.')">
+                <img src="santino/IMG_3790.jpg" alt="Cocina Santino">
+                <div class="info">
+                    <h3>Cocina Ejecutiva</h3>
+                    <p>Mueblería Santino</p>
+                    <p>Color: Café Claro</p>
+                </div>
+            </div>
+
+        <div class="muebleria" onclick="openModal('Cocina', 'santino/IMG_5933.jpg', 'Comedor', '1.38 m.')">
+                <img src="santino/IMG_5933.jpg" alt="Cocina Santino">
+                <div class="info">
+                    <h3>Cocina Premium</h3>
+                    <p>Mueblería Santino</p>
+                    <p>Color: Gris Oscuro</p>
+                </div>
+            </div>
+
+        <div class="muebleria" onclick="openModal('Cocina', 'santino/IMG_8170.jpg', 'Comedor', '1.38 m.')">
+                <img src="santino/IMG_8170.jpg" alt="Cocina Santino">
+                <div class="info">
+                    <h3>Cocina Clásica</h3>
+                    <p>Mueblería Santino</p>
+                    <p>Color: Madera y Blanco</p>
+                </div>
+            </div>
+
+        <div class="muebleria" onclick="openModal('Cocina', 'santino/IMG_9233.jpg', 'Comedor', '1.38 m.')">
+                <img src="santino/IMG_9233.jpg" alt="Cocina Santino">
+                <div class="info">
+                    <h3>Cocina Luxury</h3>
+                    <p>Mueblería Santino</p>
+                    <p>Color: Negro y Madera</p>
+                </div>
+            </div>
+
+        <div class="muebleria" onclick="openModal('Cocina', 'santino/c9bea954-b84e-434b-90ca-447b6210ec3e.JPG', 'Comedor', '1.38 m.')">
+                <img src="santino/c9bea954-b84e-434b-90ca-447b6210ec3e.JPG" alt="Cocina Santino">
+                <div class="info">
+                    <h3>Cocina Exclusiva</h3>
+                    <p>Mueblería Santino</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       <!-- Modal para detalles del producto -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <img src="" alt="" class="modal-image" id="modal-image">
+            <div class="modal-details">
+                <h2 id="modal-title"></h2>
+                <p id="modal-type"></p>
+                <p id="modal-dimensions"></p>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

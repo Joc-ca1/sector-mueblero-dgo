@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islas - Mueblería</title>
+    <link rel="stylesheet" href="accesorios.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <script defer src="accesorios.js"></script>
+     <script src="search.js"></script>
+</head>
+<!-- ENCABEZADO (HEADER) -->
+<header>
+    <div class="logo">
+        <img src="imagen/logo.png" alt="Sector Mueblero de Durango" class="logo-img">     
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="eventos.html">EVENTOS</a></li>
+            <li class="dropdown">
+                <a href="#">CATEGORIAS</a>
+                <ul class="dropdown-content">
+                    <li><a href="comedores.html">Comedor</a></li>
+                    <li><a href="buffeteros.html">Buffeteros</a></li>
+                    <li><a href="cocinas.html">Cocinas</a></li>
+                    <li><a href="islas.html">Islas</a></li>
+                    <li><a href="recamaras.html">Recámaras</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#equipo">EQUIPO</a></li>
+           <li><a href="index.html#contacto">CONTACTO</a></li>
+            <div class="search-container">
+              <input type="text" placeholder="Buscar...">
+              <button><i class="fas fa-search"></i></button>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="container">
+        <h1>Accesorios</h1>
+        <div class="productos-grid">
+               
+         <!-- Accesorio 1 -->
+          <div class="muebleria" onclick="openModal('Accesorio Bourbon', 'Alfa/accesorios/Catalogo Alfa JUNIO 2024 email-58-61_page-0001.jpg', 'Accesorio', '50cm x 30cm', 'Elegante accesorio decorativo para el hogar.')">
+            <img src="Alfa/accesorios/Catalogo Alfa JUNIO 2024 email-58-61_page-0001.jpg" alt="Accesorio Alfa 1" />
+            <div class="info">
+              <p>Accesorio</p>
+              <h3>Bourbon</h3>
+              <p>Decorativo</p>
+              <p>Color: Natural</p>
+            </div>
+          </div>
+
+          <!-- Accesorio 2 -->
+          <div class="muebleria" onclick="openModal('Accesorio Bourbon', 'Alfa/accesorios/Catalogo Alfa JUNIO 2024 email-58-61_page-0002.jpg', 'Accesorio', '45cm x 25cm', 'Accesorio moderno para complementar tu espacio.')">
+            <img src="Alfa/accesorios/Catalogo Alfa JUNIO 2024 email-58-61_page-0002.jpg" alt="Accesorio Alfa 2" />
+            <div class="info">
+              <p>Accesorio</p>
+              <h3>Bourbon</h3>
+              <p>Decorativo</p>
+              <p>Color: Madera</p>
+            </div>
+          </div>
+
+          <!-- Accesorio 3 -->
+          <div class="muebleria" onclick="openModal('Accesorio Oregon', 'Alfa/accesorios/Catalogo Alfa JUNIO 2024 email-58-61_page-0003.jpg', 'Accesorio', '40cm x 20cm', 'Accesorio decorativo con diseño contemporáneo.')">
+            <img src="Alfa/accesorios/Catalogo Alfa JUNIO 2024 email-58-61_page-0003.jpg" alt="Accesorio Alfa 3" />
+            <div class="info">
+              <p>Accesorio</p>
+              <h3>Oregon</h3>
+              <p>Decorativo</p>
+              <p>Color: Natural</p>
+            </div>
+          </div>
+
+          <!-- Accesorio 4 -->
+          <div class="muebleria" onclick="openModal('Accesorio Oregon', 'Alfa/accesorios/Catalogo Alfa JUNIO 2024 email-58-61_page-0004.jpg', 'Accesorio', '35cm x 15cm', 'Accesorio elegante para dar un toque especial a tu hogar.')">
+            <img src="Alfa/accesorios/Catalogo Alfa JUNIO 2024 email-58-61_page-0004.jpg" alt="Accesorio Alfa 4" />
+            <div class="info">
+              <p>Accesorio</p>
+              <h3>Oregon</h3>
+              <p>Decorativo</p>
+              <p>Color: Madera</p>
+            </div>
+          </div>
+
+
+
+    <!-- Modal para detalles del producto -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <img src="" alt="" class="modal-image" id="modal-image">
+            <div class="modal-details">
+                <h2 id="modal-title"></h2>
+                <p id="modal-type"></p>
+                <p id="modal-dimensions"></p>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
